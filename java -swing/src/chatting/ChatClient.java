@@ -245,7 +245,7 @@ public class ChatClient extends JFrame implements ActionListener, Runnable, Item
         btnExit.setEnabled(true);
         try {
             String serverIp=txtServer.getText();
-            socket=new Socket(serverIp, 5555); //소켓지정
+            socket=new Socket(serverIp, 4444); //소켓지정
             in=new BufferedReader(new InputStreamReader(socket.getInputStream())); //서버에서 stream(접속자들 메시지 등등?)을 가져옴?
             out=socket.getOutputStream(); // 서버로 보냄
             out.write((txtName.getText()+"\n").getBytes()); //접속자 대화명을 바이트로해서 서버에 내보냄?

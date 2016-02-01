@@ -64,7 +64,7 @@ public class ChatServer extends JFrame implements ActionListener, Runnable {
 	public void run() {
 		ServerSocket ss = null; //지역변수는 초기화
 		try {//외부 시스템과 접속할때 트라이캐치 뜸
-			ss = new  ServerSocket(5555);
+			ss = new  ServerSocket(4444);
 			// 5555는 서버 접속포트 번호 : 포트 = 1가 3번지 주소
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

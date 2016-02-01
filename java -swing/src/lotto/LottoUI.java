@@ -3,6 +3,7 @@ package lotto;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -81,6 +82,8 @@ public class LottoUI extends JFrame implements ActionListener {
 		lotto.setLotto(); //로또볼 추첨에 들어갑니다.
 		int[] temp = lotto.getLotto(); //셋로또 했으니 겟로또
 		for (int i = 0; i < temp.length; i++) {
+			URL imageURL = getClass().getClassLoader().getResource("image/"+temp[i]+".gif");
+				
 		btns.get(i).setIcon(new ImageIcon("src/image/"+temp[i]+".gif"));
 		}
 	}
